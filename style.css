@@ -1,0 +1,95 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/Inter-Medium.ttf') format('truetype');
+}
+
+:root {
+    --dark-color: #1e293b;
+    --white-color: #ffffff;
+    --blue-color: #3b82f6;
+    --gray-dark-color: #64748b;
+    --gray-light-color: #cbd5e1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background: var(--white-color);
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.header__top-bar {
+    background-color: var(--dark-color);
+    padding: 8px;
+}
+
+.header__top-bar .header__container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn__text {
+    font-family: 'Inter', sans-serif;
+    color: var(--white-color);
+    line-height: 143%;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.btn--login {
+    background-color: transparent;
+    padding: 8px 0px;
+    gap: 8px;
+    width: 70px;
+}
+
+.btn--login .btn__icon {
+    background: url('./assets/svg/person.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.btn--add-listing {
+    background-color: var(--blue-color);
+    padding: 6px 12px;
+    gap: 4px;
+    width: 179px;
+}
+
+.btn--add-listing .btn__icon {
+    background: url('./assets/svg/plus.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.btn--add-listing .btn__text {
+    font-weight: 500;
+}
