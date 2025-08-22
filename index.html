@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Доска объявлений</title>
         <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -11,18 +11,31 @@
         <header class="header">
             <div class="header__top-bar">
                 <div class="header__container container">
-                    <button class="btn btn--login">
+                    <button class="btn btn--login sm-400">
                         <span class="btn__icon"></span>
-                        <span class="btn__text">Войти</span>
+                        Войти
                     </button>
-                    <button class="btn btn--add-listing">
-                        <span class="btn__text">Новое объявление</span>
+                    <button class="btn btn--add sm-500">
+                        Новое объявление
                         <span class="btn__icon"></span>
                     </button>
                 </div>
             </div>
             <div class="header__search-bar">
-                <div class="header__container container"></div>
+                <div class="header__container container">
+                    <div class="h3 big-700">Доска объявлений</div>
+                    <button class="btn btn--menu sm-500">
+                        <span class="btn__icon"></span>
+                        Все категории
+                    </button>
+                    <form class="form--search">
+                        <input type="text" class="input" placeholder="Поиск по объявлениям" />
+                        <button type="submit" class="btn sm-500">
+                            Найти
+                            <span class="btn__icon"></span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </header>
         <main class="main container"></main>

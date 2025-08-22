@@ -1,33 +1,50 @@
 @font-face {
+    font-family: 'Inter-sm-400';
     font-display: swap;
-    font-family: 'Inter';
+    font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
 }
 
 @font-face {
+    font-family: 'Inter-sm-500';
     font-display: swap;
-    font-family: 'Inter';
+    font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
-    src: url('./assets/fonts/Inter-Medium.ttf') format('truetype');
+    src: url('./assets/fonts/Inter_18pt-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter-big-700';
+    font-display: swap;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/Inter_28pt-Bold.ttf') format('truetype');
 }
 
 :root {
+    /* Цвета */
     --dark-color: #1e293b;
     --white-color: #ffffff;
     --blue-color: #3b82f6;
-    --gray-dark-color: #64748b;
-    --gray-light-color: #cbd5e1;
+    --gray-500-color: #64748b;
+    --gray-300-color: #cbd5e1;
+    --gray-200-color: #e2e8f0;
+    /* Шрифты */
+    --font-sm-400: 'Inter-sm-400', sans-serif;
+    --font-sm-500: 'Inter-sm-500', sans-serif;
+    --font-big-700: 'Inter-big-700', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: var(--font-sm-400);
     background: var(--white-color);
     color: var(--dark-color);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .container {
@@ -35,9 +52,59 @@ body {
     margin: 0 auto;
 }
 
+.h3 {
+    font-size: 30px;
+    line-height: 120%;
+}
+
+.sm-400 {
+    font-family: var(--font-sm-400);
+    font-weight: 400;
+}
+
+.sm-500 {
+    font-family: var(--font-sm-500);
+    font-weight: 500;
+}
+
+.big-700 {
+    font-family: var(--font-big-700);
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: none;
+    white-space: nowrap;
+    line-height: 143%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input {
+    border: 1px solid var(--gray-300-color);
+    border-radius: 4px;
+    padding: 8px 12px;
+    line-height: 143%;
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--gray-500-color);
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+
+/* Header Top Bar */
+
 .header__top-bar {
     background-color: var(--dark-color);
-    padding: 8px;
+    padding: 8px 0;
 }
 
 .header__top-bar .header__container {
@@ -47,27 +114,13 @@ body {
     gap: 24px;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn__text {
-    font-family: 'Inter', sans-serif;
+.header__top-bar .btn {
     color: var(--white-color);
-    line-height: 143%;
-    font-weight: 400;
-    font-size: 14px;
 }
 
 .btn--login {
     background-color: transparent;
     padding: 8px 0px;
-    gap: 8px;
     width: 70px;
 }
 
@@ -77,19 +130,68 @@ body {
     height: 20px;
 }
 
-.btn--add-listing {
+.btn--add {
     background-color: var(--blue-color);
     padding: 6px 12px;
     gap: 4px;
     width: 179px;
 }
 
-.btn--add-listing .btn__icon {
+.btn--add .btn__icon {
     background: url('./assets/svg/plus.svg');
     width: 20px;
     height: 20px;
 }
 
-.btn--add-listing .btn__text {
-    font-weight: 500;
+/* Header Search Bar */
+
+.header__search-bar {
+    padding: 24px 0px;
+    border-bottom: 1px solid var(--gray-200-color);
+}
+
+.header__search-bar .header__container {
+    display: flex;
+    align-items: center;
+}
+
+.btn--menu {
+    background-color: var(--white-color);
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
+    margin-left: 24px;
+    margin-right: 12px;
+    height: 36px;
+}
+
+.btn--menu .btn__icon {
+    background: url('./assets/svg/list-nested.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.form--search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form--search .input {
+    flex: 1;
+    border-radius: 4px 0 0 4px;
+    height: 36px;
+}
+
+.form--search .btn {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 0 4px 4px 0;
+    width: 91px;
+    height: 36px;
+}
+
+.form--search .btn__icon {
+    background: url('./assets/svg/search.svg');
+    width: 16px;
+    height: 16px;
 }
