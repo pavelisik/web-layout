@@ -5,7 +5,10 @@
 
 .header-search-bar .container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.header-search-bar .h6 {
 }
 
 .btn-menu {
@@ -47,4 +50,11 @@
     background: url('../assets/svg/search.svg');
     width: 16px;
     height: 16px;
+}
+
+@media (min-width: 992px) {
+    .header-search-bar .container {
+        display: flex;
+        align-items: flex-end;
+    }
 }
