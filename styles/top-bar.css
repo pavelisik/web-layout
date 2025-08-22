@@ -1,0 +1,40 @@
+.header-top-bar {
+    background-color: var(--dark-color);
+    padding: 8px 0;
+}
+
+.header-top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+}
+
+.header-top-bar .btn {
+    color: var(--white-color);
+}
+
+.btn-login {
+    background-color: transparent;
+    padding: 8px 0px;
+    width: 70px;
+}
+
+.btn-login .icon {
+    background: url('../assets/svg/person.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.btn-add {
+    background-color: var(--blue-color);
+    padding: 6px 12px;
+    gap: 4px;
+    width: 179px;
+}
+
+.btn-add .icon {
+    background: url('../assets/svg/plus.svg');
+    width: 20px;
+    height: 20px;
+}

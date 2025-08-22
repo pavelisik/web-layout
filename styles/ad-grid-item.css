@@ -1,0 +1,24 @@
+.ad-grid__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ad-grid__item img {
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.ad-grid__item h6 {
+    color: var(--blue-color);
+}
+
+.ad-grid__item .price {
+    color: var(--dark-color);
+}
+
+.ad-grid__item .address,
+.ad-grid__item .time {
+    color: var(--gray-500-color);
+    line-height: 143%;
+}

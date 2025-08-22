@@ -1,0 +1,50 @@
+.header-search-bar {
+    padding: 24px 0px;
+    border-bottom: 1px solid var(--gray-200-color);
+}
+
+.header-search-bar .container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-menu {
+    background-color: var(--white-color);
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
+    margin-left: 24px;
+    margin-right: 12px;
+    height: 36px;
+}
+
+.btn-menu .icon {
+    background: url('../assets/svg/list-nested.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.form-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form-search .input {
+    flex: 1;
+    border-radius: 4px 0 0 4px;
+    height: 36px;
+}
+
+.form-search .btn {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 0 4px 4px 0;
+    width: 91px;
+    height: 36px;
+}
+
+.form-search .icon {
+    background: url('../assets/svg/search.svg');
+    width: 16px;
+    height: 16px;
+}

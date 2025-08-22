@@ -4,7 +4,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -13,7 +13,16 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
-    src: url('./assets/fonts/Inter_18pt-Medium.ttf') format('truetype');
+    src: url('../assets/fonts/Inter_18pt-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter-sm-600';
+    font-display: swap;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/Inter_18pt-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -22,7 +31,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 600;
-    src: url('./assets/fonts/Inter_24pt-SemiBold.ttf') format('truetype');
+    src: url('../assets/fonts/Inter_24pt-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -31,5 +40,5 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 700;
-    src: url('./assets/fonts/Inter_28pt-Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Inter_28pt-Bold.ttf') format('truetype');
 }
