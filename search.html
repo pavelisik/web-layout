@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Доска объявлений</title>
+        <!-- сброс стилей -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <!-- шрифты и утилитарные стили -->
+        <link rel="stylesheet" href="styles/fonts.css" />
+        <link rel="stylesheet" href="styles/utilities.css" />
+        <!-- глобальные стили -->
+        <link rel="stylesheet" href="styles/style.css" />
+        <!-- стили отдельных компонентов -->
+        <link rel="stylesheet" href="styles/top-bar.css" />
+        <link rel="stylesheet" href="styles/search-bar.css" />
+        <link rel="stylesheet" href="styles/ad-grid-item.css" />
+        <link rel="stylesheet" href="styles/sidebar.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-top-bar">
+                <div class="container">
+                    <button class="btn btn-login sm-400">
+                        <span class="icon"></span>
+                        Войти
+                    </button>
+                    <button class="btn btn-add sm-500">
+                        Новое объявление
+                        <span class="icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-search-bar">
+                <div class="container">
+                    <h3 class="h3 big-700">Доска объявлений</h3>
+                    <button class="btn btn-menu sm-500">
+                        <span class="icon"></span>
+                        Все категории
+                    </button>
+                    <form class="form-search">
+                        <input type="text" class="input" placeholder="Поиск по объявлениям" />
+                        <button type="submit" class="btn sm-500">
+                            Найти
+                            <span class="icon"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main class="main container">
+            <h4 class="h4 med-600">Объявления по запросу «попугаи»</h4>
+            <div class="page-content">
+                <aside class="sidebar">
+                    <form>
+                        <fieldset>
+                            <legend>Все категории</legend>
+
+                            <details open>
+                                <summary>
+                                    <label><input type="radio" name="cat" />Животные</label>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Товары для животных</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Птицы</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Аквариум</label>
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    <label><input type="radio" name="cat" />Хобби и отдых</label>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    <label><input type="radio" name="cat" />Для дома и дачи</label>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    <label><input type="radio" name="cat" />Личные вещи</label>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    <label><input type="radio" name="cat" />Услуги</label>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <label><input type="radio" name="cat" />Недвижимость</label>
+
+                            <details>
+                                <summary>
+                                    <label><input type="radio" name="cat" />Электроника</label>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                    </li>
+                                </ul>
+                            </details>
+                        </fieldset>
+
+                        <button type="submit">Показать объявления</button>
+                    </form>
+                </aside>
+                <div class="ad-grid-wrapper">
+                    <div class="ad-grid-header">шапка для сетки</div>
+                    <div class="ad-grid ad-grid__short">
+                        <div class="ad-grid__item">
+                            <a href="/"><img src="assets/images/img03.jpg" alt="Гитара Fender" /></a>
+                            <h6 class="h6 sm-600"><a href="/">Гитара Fender 01</a></h6>
+                            <span class="price h6 sm-600">20 000 ₽</span>
+                            <span class="address">Москва, Ленинский проспект</span>
+                            <span class="time">Сегодня 14:12</span>
+                        </div>
+                        <div class="ad-grid__item">
+                            <a href="/"><img src="assets/images/img01.jpg" alt="Гитара Fender" /></a>
+                            <h6 class="h6 sm-600"><a href="/">Гитара Fender 02</a></h6>
+                            <span class="price h6 sm-600">20 000 ₽</span>
+                            <span class="address">Москва, Ленинский проспект</span>
+                            <span class="time">Сегодня 14:12</span>
+                        </div>
+                        <div class="ad-grid__item">
+                            <a href="/"><img src="assets/images/img02.jpg" alt="Гитара Fender" /></a>
+                            <h6 class="h6 sm-600"><a href="/">Гитара Fender 03</a></h6>
+                            <span class="price h6 sm-600">20 000 ₽</span>
+                            <span class="address">Москва, Ленинский проспект</span>
+                            <span class="time">Сегодня 14:12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
