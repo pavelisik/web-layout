@@ -52,6 +52,20 @@ a {
     color: var(--gray-500-color);
 }
 
+.select {
+    border: 1px solid var(--gray-300-color);
+    border-radius: 4px;
+    padding: 8px 44px 8px 12px;
+    background-image: url('../assets/svg/select-arrow.svg');
+    background-position: right 18px center;
+    background-repeat: no-repeat;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
 .summary {
     display: flex;
     align-items: center;

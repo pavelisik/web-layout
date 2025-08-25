@@ -1,12 +1,11 @@
 .ad-grid {
     display: grid;
-    margin-top: 24px;
+    column-gap: 12px;
+    row-gap: 20px;
 }
 
 .ad-grid__full {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 12px;
-    row-gap: 20px;
 }
 
 .ad-grid-header {
@@ -21,16 +20,33 @@
     color: var(--gray-500-color);
 }
 
+.sort {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sort .select {
+    width: 200px;
+}
+
+.sort option {
+    line-height: 150px;
+}
+
 @media (min-width: 576px) {
-    .ad-grid__full {
-        grid-template-columns: repeat(3, 1fr);
+    .ad-grid {
         column-gap: 18px;
         row-gap: 25px;
+    }
+
+    .ad-grid__full {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 768px) {
-    .ad-grid__full {
+    .ad-grid {
         column-gap: 24px;
         row-gap: 32px;
     }
