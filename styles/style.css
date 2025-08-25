@@ -92,9 +92,15 @@ a {
 
 .page-content {
     display: grid;
-    grid-template-columns: 306px auto; /* временно жестко */
-    gap: 24px;
+    grid-template-columns: minmax(200px, 25%) auto;
+    gap: 15px;
     margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+    .page-content {
+        gap: 24px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -106,5 +112,8 @@ a {
 @media (min-width: 1400px) {
     .container {
         max-width: 1296px;
+    }
+    .page-content {
+        grid-template-columns: 306px auto;
     }
 }
