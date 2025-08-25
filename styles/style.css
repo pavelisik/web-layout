@@ -45,10 +45,25 @@ a {
     padding: 8px 12px;
     line-height: 143%;
     outline: none;
+    width: 100%;
 }
 
 .input::placeholder {
     color: var(--gray-500-color);
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    list-style: none;
+    user-select: none;
+}
+
+.summary::before {
+    content: '';
+    cursor: pointer;
 }
 
 .container {
@@ -63,43 +78,9 @@ a {
 
 .page-content {
     display: grid;
-    grid-template-columns: auto auto;
-}
-
-.ad-grid {
-    display: grid;
-    margin-top: 24px;
-}
-
-.ad-grid__full {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 12px;
-    row-gap: 20px;
-}
-
-@media (min-width: 576px) {
-    .ad-grid__full {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 18px;
-        row-gap: 25px;
-    }
-}
-
-@media (min-width: 768px) {
-    .ad-grid__full {
-        column-gap: 24px;
-        row-gap: 32px;
-    }
-}
-
-@media (min-width: 992px) {
-    .ad-grid__full {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    /* потом надо будет настроить для мелких разрешений */
-    .ad-grid__short {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: 306px auto; /* временно жестко */
+    gap: 24px;
+    margin-top: 16px;
 }
 
 @media (min-width: 1200px) {

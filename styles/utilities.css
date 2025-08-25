@@ -13,6 +13,27 @@
     line-height: 133%;
 }
 
+.base {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
 .sm-400 {
     font-family: var(--font-sm-400);
     font-weight: 400;

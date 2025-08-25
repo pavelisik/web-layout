@@ -1,4 +1,73 @@
 .sidebar {
-    /* временно жестко */
-    width: 306px;
+    padding-top: 9px;
+}
+
+.sidebar-filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-filter__category {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-filter__category label {
+    color: var(--blue-color);
+    font-size: 16px;
+    line-height: 150%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sidebar-filter__category > label {
+    padding-left: 18px;
+}
+
+.sidebar-filter__category ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.sidebar-filter__category ul li {
+    padding-left: 32px;
+}
+
+.sidebar-filter__category .summary::before {
+    background: url('../assets/svg/list-arrow.svg');
+    width: 10px;
+    height: 10px;
+}
+
+.sidebar-filter__category .details[open] .summary::before {
+    background: url('../assets/svg/list-arrow-down.svg');
+    width: 10px;
+    height: 6px;
+}
+
+.sidebar-filter__category input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-filter__price .two-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-filter__price .input {
+    line-height: 150%;
+}
+
+.sidebar-filter .btn {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding-top: 12px;
+    padding-bottom: 12px;
 }

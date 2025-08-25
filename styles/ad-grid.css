@@ -1,0 +1,47 @@
+.ad-grid {
+    display: grid;
+    margin-top: 24px;
+}
+
+.ad-grid__full {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 12px;
+    row-gap: 20px;
+}
+
+.ad-grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ad-grid-header .ads-count {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    color: var(--gray-500-color);
+}
+
+@media (min-width: 576px) {
+    .ad-grid__full {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 18px;
+        row-gap: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .ad-grid__full {
+        column-gap: 24px;
+        row-gap: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    .ad-grid__full {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /* потом надо будет настроить для мелких разрешений */
+    .ad-grid__short {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

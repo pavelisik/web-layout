@@ -14,6 +14,7 @@
         <!-- стили отдельных компонентов -->
         <link rel="stylesheet" href="styles/top-bar.css" />
         <link rel="stylesheet" href="styles/search-bar.css" />
+        <link rel="stylesheet" href="styles/ad-grid.css" />
         <link rel="stylesheet" href="styles/ad-grid-item.css" />
         <link rel="stylesheet" href="styles/sidebar.css" />
     </head>
@@ -39,7 +40,11 @@
                         Все категории
                     </button>
                     <form class="form-search">
-                        <input type="text" class="input" placeholder="Поиск по объявлениям" />
+                        <input
+                            type="text"
+                            class="input"
+                            placeholder="Поиск по объявлениям"
+                        />
                         <button type="submit" class="btn sm-500">
                             Найти
                             <span class="icon"></span>
@@ -52,125 +57,277 @@
             <h4 class="h4 med-600">Объявления по запросу «попугаи»</h4>
             <div class="page-content">
                 <aside class="sidebar">
-                    <form>
-                        <fieldset>
-                            <legend>Все категории</legend>
+                    <form class="sidebar-filter">
+                        <fieldset class="sidebar-filter__category mb-16">
+                            <legend class="h6 sm-600 mb-12">
+                                Все категории
+                            </legend>
 
-                            <details open>
-                                <summary>
-                                    <label><input type="radio" name="cat" />Животные</label>
+                            <details class="details" open>
+                                <summary class="summary">
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="cat"
+                                        />Животные</label
+                                    >
                                 </summary>
                                 <ul>
                                     <li>
-                                        <label><input type="radio" name="cat" />Товары для животных</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Товары для животных</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Птицы</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Птицы</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Аквариум</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Аквариум</label
+                                        >
                                     </li>
                                 </ul>
                             </details>
 
-                            <details>
-                                <summary>
-                                    <label><input type="radio" name="cat" />Хобби и отдых</label>
+                            <details class="details">
+                                <summary class="summary">
+                                    <label
+                                        ><input type="radio" name="cat" />Хобби
+                                        и отдых</label
+                                    >
                                 </summary>
                                 <ul>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 1</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 2</label
+                                        >
                                     </li>
                                 </ul>
                             </details>
 
-                            <details>
-                                <summary>
-                                    <label><input type="radio" name="cat" />Для дома и дачи</label>
+                            <details class="details">
+                                <summary class="summary">
+                                    <label
+                                        ><input type="radio" name="cat" />Для
+                                        дома и дачи</label
+                                    >
                                 </summary>
                                 <ul>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 1</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 2</label
+                                        >
                                     </li>
                                 </ul>
                             </details>
 
-                            <details>
-                                <summary>
-                                    <label><input type="radio" name="cat" />Личные вещи</label>
+                            <details class="details">
+                                <summary class="summary">
+                                    <label
+                                        ><input type="radio" name="cat" />Личные
+                                        вещи</label
+                                    >
                                 </summary>
                                 <ul>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 1</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 2</label
+                                        >
                                     </li>
                                 </ul>
                             </details>
 
-                            <details>
-                                <summary>
-                                    <label><input type="radio" name="cat" />Услуги</label>
+                            <details class="details">
+                                <summary class="summary">
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="cat"
+                                        />Услуги</label
+                                    >
                                 </summary>
                                 <ul>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 1</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 2</label
+                                        >
                                     </li>
                                 </ul>
                             </details>
 
-                            <label><input type="radio" name="cat" />Недвижимость</label>
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="cat"
+                                />Недвижимость</label
+                            >
 
-                            <details>
-                                <summary>
-                                    <label><input type="radio" name="cat" />Электроника</label>
+                            <details class="details">
+                                <summary class="summary">
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="cat"
+                                        />Электроника</label
+                                    >
                                 </summary>
                                 <ul>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 1</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 1</label
+                                        >
                                     </li>
                                     <li>
-                                        <label><input type="radio" name="cat" />Подкатегория 2</label>
+                                        <label
+                                            ><input
+                                                type="radio"
+                                                name="cat"
+                                            />Подкатегория 2</label
+                                        >
                                     </li>
                                 </ul>
                             </details>
                         </fieldset>
 
-                        <button type="submit">Показать объявления</button>
+                        <fieldset class="sidebar-filter__price mb-24">
+                            <legend class="base sm-600 mb-8">Цена</legend>
+                            <div class="two-inputs">
+                                <input
+                                    type="text"
+                                    class="input base"
+                                    placeholder="Цена от"
+                                />
+                                <input
+                                    type="text"
+                                    class="input base"
+                                    placeholder="до, руб."
+                                />
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="btn base">
+                            Показать объявления
+                        </button>
                     </form>
                 </aside>
                 <div class="ad-grid-wrapper">
-                    <div class="ad-grid-header">шапка для сетки</div>
+                    <div class="ad-grid-header">
+                        <span class="ads-count base"
+                            >Всего найдено 1 234 объявления</span
+                        >
+                        <div class="sort-block">
+                            <label for="sort-select" class="sort-block__label"
+                                >Сортировка по:</label
+                            >
+                            <select id="sort-select" class="sort-block__select">
+                                <option value="newest">Новизне</option>
+                                <option value="price">Цене</option>
+                                <option value="date">Дате</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="ad-grid ad-grid__short">
                         <div class="ad-grid__item">
-                            <a href="/"><img src="assets/images/img03.jpg" alt="Гитара Fender" /></a>
-                            <h6 class="h6 sm-600"><a href="/">Гитара Fender 01</a></h6>
+                            <a href="/"
+                                ><img
+                                    src="assets/images/img03.jpg"
+                                    alt="Гитара Fender"
+                            /></a>
+                            <h6 class="h6 sm-600">
+                                <a href="/">Гитара Fender 01</a>
+                            </h6>
                             <span class="price h6 sm-600">20 000 ₽</span>
-                            <span class="address">Москва, Ленинский проспект</span>
+                            <span class="address"
+                                >Москва, Ленинский проспект</span
+                            >
                             <span class="time">Сегодня 14:12</span>
                         </div>
                         <div class="ad-grid__item">
-                            <a href="/"><img src="assets/images/img01.jpg" alt="Гитара Fender" /></a>
-                            <h6 class="h6 sm-600"><a href="/">Гитара Fender 02</a></h6>
+                            <a href="/"
+                                ><img
+                                    src="assets/images/img01.jpg"
+                                    alt="Гитара Fender"
+                            /></a>
+                            <h6 class="h6 sm-600">
+                                <a href="/">Гитара Fender 02</a>
+                            </h6>
                             <span class="price h6 sm-600">20 000 ₽</span>
-                            <span class="address">Москва, Ленинский проспект</span>
+                            <span class="address"
+                                >Москва, Ленинский проспект</span
+                            >
                             <span class="time">Сегодня 14:12</span>
                         </div>
                         <div class="ad-grid__item">
-                            <a href="/"><img src="assets/images/img02.jpg" alt="Гитара Fender" /></a>
-                            <h6 class="h6 sm-600"><a href="/">Гитара Fender 03</a></h6>
+                            <a href="/"
+                                ><img
+                                    src="assets/images/img02.jpg"
+                                    alt="Гитара Fender"
+                            /></a>
+                            <h6 class="h6 sm-600">
+                                <a href="/">Гитара Fender 03</a>
+                            </h6>
                             <span class="price h6 sm-600">20 000 ₽</span>
-                            <span class="address">Москва, Ленинский проспект</span>
+                            <span class="address"
+                                >Москва, Ленинский проспект</span
+                            >
                             <span class="time">Сегодня 14:12</span>
                         </div>
                     </div>
